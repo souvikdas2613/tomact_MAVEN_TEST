@@ -7,7 +7,7 @@ pipeline
 		{
 			steps
 			{
-				echo "PATH = {$PATH}"
+				echo "INITIALIZING CODE FILE............."
 				echo "M2_HOME = {$M2_HOME}"
 			}
 		}
