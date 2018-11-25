@@ -25,7 +25,7 @@ pipeline
 		
 		stage ('post')
 		{
-			success
+			steps
 			{
 				echo "Now archiving......."
 				arhiveArtifacts artifacts : '**/*.war'
