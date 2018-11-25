@@ -1,6 +1,12 @@
 pipeline
 {
 	agent any
+	
+	tools 
+	{
+		maven 'localMaven'
+	}
+	
 	stages
 	{
 		stage ('Initialize')
@@ -28,7 +34,7 @@ pipeline
 			steps
 			{
 				echo "Now archiving......."
-				archiveArtifacts artifacts : '**/*.war'
+				archiveArtifacts artifacts: '**/target/*.war'
 			}
 		}
 		
