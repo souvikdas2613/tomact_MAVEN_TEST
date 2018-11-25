@@ -7,10 +7,8 @@ pipeline
 		{
 			steps
 			{
-				sh ***
 				echo "PATH = {$PATH}"
 				echo "M2_HOME = {$M2_HOME}"
-				***
 			}
 		}
 		
@@ -19,6 +17,16 @@ pipeline
 			steps
 			{
 				echo "HELLO WORLD"
+				bat 'mvn clean package'
+			}
+		}
+		
+		stage ('post')
+		{
+			success
+			{
+				echo "Now archiving......."
+				arhiveArtifacts artifacts : '**/*.war'
 			}
 		}
     }
