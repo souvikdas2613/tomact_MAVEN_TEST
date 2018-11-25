@@ -28,7 +28,7 @@ pipeline
 			steps
 			{
 				echo "Now archiving......."
-				arhiveArtifacts artifacts : '**/*.war'
+				archiveArtifacts artifacts : '**/*.war'
 			}
 		}
 		
