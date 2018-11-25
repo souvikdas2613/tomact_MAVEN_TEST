@@ -31,5 +31,13 @@ pipeline
 				arhiveArtifacts artifacts : '**/*.war'
 			}
 		}
+		
+		stage ('Deplay in Stage')
+		{
+			steps
+			{
+				build job : 'Deploy_by_Pipeline'
+			}
+		}
 	}
 }
