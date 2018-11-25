@@ -1,13 +1,15 @@
 pipeline
 {
 	agent any
-    stages
-    {
-    	stage ('Initialize')
+	stages
+	{
+    		stage ('Initialize')
 		{
 			steps
 			{
+
 				echo "PATH = {$PATH}"
+				echo "INITIALIZING CODE FILE............."
 				echo "M2_HOME = {$M2_HOME}"
 			}
 		}
@@ -29,5 +31,5 @@ pipeline
 				arhiveArtifacts artifacts : '**/*.war'
 			}
 		}
-    }
+	}
 }
